@@ -189,7 +189,7 @@
     const goal = document.getElementById("goal").value.trim();
     const referral = document.getElementById("referral").value.trim();
 
-    const message = `Hello! I just registered for the webinar.%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Phone:* ${phone || "Not Provided"}%0A*Career Path:* ${category}%0A*Goal:* ${goal}%0A*Referral:* ${referral}`;
+    const message = `Hello! I just registered for the webinar.%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Phone:* ${phone || "Not Provided"}%0A*Role:* ${category}%0A*Goal:* ${goal}%0A*Referral:* ${referral}`;
 
     const whatsappNumber = "2348157451278"; // Replace with your WhatsApp number
     const url = `https://wa.me/${whatsappNumber}?text=${message}`;
