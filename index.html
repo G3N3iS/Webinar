@@ -172,9 +172,7 @@
     <option>Business Street Corner </option>
     <option>Other</option>
   </select>
-<a href="https://wa.me/2348157451278?text=I%20just%20registered!" target="_blank">
-  <button type="button">Submit Registration</button>
-</a>
+<button type="button" onclick="sendToWhatsApp()">Submit Registration</button>
 </form>
 
 <footer>
@@ -182,5 +180,23 @@
 </footer>
 
   </div>
+  <script>
+  function sendToWhatsApp() {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const category = document.getElementById("category").value.trim();
+    const goal = document.getElementById("goal").value.trim();
+    const referral = document.getElementById("referral").value.trim();
+
+    const message = `Hello! I just registered for the webinar.%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Phone:* ${phone || "Not Provided"}%0A*Career Path:* ${category}%0A*Goal:* ${goal}%0A*Referral:* ${referral}`;
+
+    const whatsappNumber = "2348157451278"; // Replace with your WhatsApp number
+    const url = `https://wa.me/${whatsappNumber}?text=${message}`;
+
+    window.open(url, "_blank");
+  }
+</script>
+
 </body>
 </html>
